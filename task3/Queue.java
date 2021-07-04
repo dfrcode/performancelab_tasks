@@ -23,9 +23,11 @@ public class Queue {
     }
 
     public double getMaxNumb(ArrayList<Double> numbs) {
-        double max = 0;
+        double max = numbs.get(0);
         for(int i = 0; i < numbs.size(); i++) {
-            max = Math.max(max, numbs.get(i));
+            if(numbs.get(i) > max){
+                max = numbs.get(i);
+            }
         }
         return numbs.indexOf(max) + 1;
     }

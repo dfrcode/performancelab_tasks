@@ -11,18 +11,13 @@ public class Main {
             ArrayList<String> strArr = hourRange.getStrArr(args[0]);
             ArrayList<Double> numbArr = hourRange.getDoubleArr(args[0]);
 
-            ArrayList<Double> oldNumArr = new ArrayList<>();
-            for (Double i : numbArr) {
-                oldNumArr.add(i);
-            }
-
             double min = hourRange.getMinNumb(numbArr);
             int countMin = hourRange.countNumbInList(numbArr, min);
             double max = hourRange.getMaxNumb(numbArr);
             int countMax = hourRange.countNumbInList(numbArr, max);
 
-            int indexMin = hourRange.indexNumb(min, oldNumArr);
-            int indexMax = hourRange.indexNumb(max, oldNumArr);
+            int indexMin = hourRange.indexNumb(min, numbArr);
+            int indexMax = hourRange.indexNumb(max, numbArr);
 
             for(int i = 0; i < countMax; i++) {
                 System.out.println(strArr.get(indexMax));

@@ -32,14 +32,22 @@ public class Calculator {
     }
 
     public double getMinNumber(ArrayList<Integer> arr) {
-        Collections.sort(arr);
         double min = arr.get(0);
+        for(int i = 0; i < arr.size(); i++) {
+            if(arr.get(i) < min) {
+                min = arr.get(i);
+            }
+        }
         return min;
     }
 
     public double getMaxNumber(ArrayList<Integer> arr) {
-        Collections.sort(arr);
-        double max = arr.get(arr.size() - 1);
+        double max = arr.get(0);
+        for(int i = 0; i < arr.size(); i++) {
+            if(arr.get(i) > max) {
+                max = arr.get(i);
+            }
+        }
         return max;
     }
 

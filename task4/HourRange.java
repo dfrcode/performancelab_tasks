@@ -54,13 +54,23 @@ public class HourRange {
     }
 
     public double getMaxNumb(ArrayList<Double> numbs) {
-        Collections.sort(numbs);
-        return numbs.get(numbs.size() - 1);
+        double max = numbs.get(0);
+        for(int i = 0; i < numbs.size(); i++) {
+            if(numbs.get(i) > max) {
+                max = numbs.get(i);
+            }
+        }
+        return max;
     }
 
     public double getMinNumb(ArrayList<Double> numbs) {
-        Collections.sort(numbs);
-        return numbs.get(0);
+        double min = numbs.get(0);
+        for(int i = 0; i < numbs.size(); i++) {
+            if(numbs.get(i) < min) {
+                min = numbs.get(i);
+            }
+        }
+        return min;
     }
 
     public int indexNumb(double numb, ArrayList<Double> numbs) {
