@@ -12,9 +12,9 @@ public class Main {
             // медиана
             System.out.printf("%.2f\n", (double) calc.getMedian(calc.setNumbersArray(args)));
             // максимальное значение
-            System.out.printf("%.2f\n", (double) calc.getMaxNumber(calc.setNumbersArray(args)));
+            System.out.printf("%.2f\n", calc.getMaxNumber(calc.setNumbersArray(args)));
             // минимальное значение
-            System.out.printf("%.2f\n", (double) calc.getMinNumber(calc.setNumbersArray(args)));
+            System.out.printf("%.2f\n", calc.getMinNumber(calc.setNumbersArray(args)));
             // среднее значение
             System.out.printf("%.2f\n", calc.getSumNumbers(args) / (calc.setNumbersArray(args)).size());
         } catch (FileNotFoundException e) {

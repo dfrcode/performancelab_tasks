@@ -31,19 +31,15 @@ public class Calculator {
         return nums;
     }
 
-    public int getMinNumber(ArrayList<Integer> arr) {
-        int min = 0;
-        for (int i : arr) {
-            min = Math.min(min, i);
-        }
+    public double getMinNumber(ArrayList<Integer> arr) {
+        Collections.sort(arr);
+        double min = arr.get(0);
         return min;
     }
 
-    public int getMaxNumber(ArrayList<Integer> arr) {
-        int max = 0;
-        for (int i : arr) {
-            max = Math.max(max, i);
-        }
+    public double getMaxNumber(ArrayList<Integer> arr) {
+        Collections.sort(arr);
+        double max = arr.get(arr.size() - 1);
         return max;
     }
 
